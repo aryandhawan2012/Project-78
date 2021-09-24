@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Project C78
+        </title>
+
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <center style="margin-top: 40px;">
+           <h1>
+                My Family Book
+            </h1>
+ 
+            <img src="https://i.postimg.cc/MKdhy06Z/family.jpg" id="family_member_image" width="150px" height="200px">
+            <h4 id="family_member_name"></h4>
+            <button onclick="update();">NEXT</button>
+          <script>
+          
+          var images = ["https://i.postimg.cc/MGn9GJXw/family.jpg","https://i.postimg.cc/qqyYvVbq/grandpa.jpg", "Grandma.jpg", "https://i.postimg.cc/wjMnFtMX/father.jpg" , "https://i.postimg.cc/5ymDKL83/bro.jpg", "https://i.postimg.cc/JnL6wtrd/sister.jpg", "https://i.postimg.cc/bw5W5zSK/mother.jpg", "Son.png"];
+           
+           var names = ["Family Book","This is my grandfather - Krishan Lal Dhawan. He was born on 3rd November 1951 in Agra, Uttar Pradesh, India.", "This is my grandmother - Rama Dhawan. She was born on 28th August 1956 in Saharanpur, Uttar Pradesh, India.", "This is my father - Sandeep Dhawan. He was born on 21st September 1983 in Agra, Uttar Pradesh, India.", "This is my big cousin brother - Janit Dhawan. He was born on 21st July 2005 in Agra, Uttar Pradesh, India", "This is my little sister - Hemika Dhawan. She was born on 18th January 2015 in Agra, Uttar Pradesh, India", "This is my mother - Jyoti Dhawan. She was born on 20th September 1984 in Chandigarh Union Territory, India.", "This is me - Aryan. I was born on 20th March 2012."];
+                 
+           var i = 0;
+           function update()
+           {
+                i++;
+                var numbers_of_family_member_in_array = 7
+                if(i > numbers_of_family_member_in_array )
+                {
+                   i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName  = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName; 
+           }
+          </script>
+        </center>
+    </body>
+</html>
